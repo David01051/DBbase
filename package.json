@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "setup": "npm install && cd client && npm install",
-    "start": "react-scripts start",
-    "client": "npm start --prefix frontend",
+    "start": "node server/server.js",
+    "client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server/server.js",
-    "dev": "concurrently --kill-others-on-fail \" npm run server \" \"npm run client\""
+    "dev": "concurrently --kill-others-on-fail \" npm run server \" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm instlall && npm run build"
   },
   "author": "",
   "license": "ISC",

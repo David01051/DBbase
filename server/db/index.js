@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 const PORT = process.env.PORT || 8080 ;
 const CONNECTION_URL= process.env.CONNECTION_URL ;
-const {getAllStudents,getStudentByName,deleteStudent} = require('../controllers/studentController')
+/*const {getAllStudents,getStudentByName,deleteStudent} = require('../controllers/studentController')*/
 const connectToDB = ()=>{
 return mongoose.connect(CONNECTION_URL,
     {

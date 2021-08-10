@@ -1,9 +1,10 @@
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 const PORT = process.env.PORT || 8080 ;
 /*const CONNECTION_URL= process.env.CONNECTION_URL ;*/
 const path = require('path');
-const studentRoute = require('./src/routes/studentsRouter')
-const db = require('./src/DB'); // index יתפוס קבצי
+const studentRoute = require('./routes/studentRouter')
+const db = require('./db'); // index יתפוס קבצי
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -19,7 +20,7 @@ app.listen(PORT, ()=>{
     console.log(`Server is up one port:${PORT}`);
 })
 
-app.use('/school',studentRoute)
+app.use('/api/school',studentRoute)
 
 /*app.get('/', (req,res)=>{
     res.send("Hello World")

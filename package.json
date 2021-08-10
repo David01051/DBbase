@@ -2,13 +2,13 @@
   "name": "mern-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "setup": "npm install && cd client && npm install",
-    "start": "node server/index.js",
+    "start": "node server/server.js",
     "client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server/index.js",
+    "server": "nodemon server/server.js",
     "dev": "concurrently --kill-others-on-fail \" npm run server \" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },

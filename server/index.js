@@ -20,6 +20,12 @@ app.listen(PORT, ()=>{
 
 app.use('/school',studentRoute)
 
-app.get('/', (req,res)=>{
+/*app.get('/', (req,res)=>{
     res.send("Hello World")
-})
+})*/
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname,'../client/build')));
+    app.get('*',(req,res)=>{
+      read.sendFile(path/join(__dirname,'../client/build','index.html'))
+    })
+  }

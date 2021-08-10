@@ -2,10 +2,10 @@
   "name": "mern-app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "setup": "npm install && cd client && npm install",
-    "start": "node server/server.js",
+    "start": "node server/index.js",
     "client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server/index.js",

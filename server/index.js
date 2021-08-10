@@ -5,7 +5,7 @@ const path = require('path');
 const studentRoute = require('./src/routes/studentsRouter')
 const db = require('./src/DB'); // index יתפוס קבצי
 const express = require('express');
-const cors = require("cors");
+const cors = require('cors');
 const app = express();
 
 

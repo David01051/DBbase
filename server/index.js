@@ -1,8 +1,9 @@
 const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 8080 ;
-const CONNECTION_URL= process.env.CONNECTION_URL ;
+/*const CONNECTION_URL= process.env.CONNECTION_URL ;*/
+const path = require('path');
 const studentRoute = require('./src/routes/studentsRouter')
-const db = require('./src/DB') // index יתפוס קבצי
+const db = require('./src/DB'); // index יתפוס קבצי
 const express = require('express');
 const cors = require("cors");
 const app = express();
